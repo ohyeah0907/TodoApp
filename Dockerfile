@@ -7,7 +7,7 @@ COPY       requirements.txt ./
 RUN        pip install -r requirements.txt
 
 COPY       . .
-RUN chmod 664 /code/database
+RUN chmod 664 /code/tmp
 EXPOSE 5000
 
 CMD        ["python3", "app.py"]
