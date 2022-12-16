@@ -6,8 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
 # /// = relative path, //// = absolute path
-app.config['SQLALCHEMY_DATABASE_URI'] = \
-        'sqlite:///' + os.path.join(basedir, 'todo.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////database/todo.db' 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
