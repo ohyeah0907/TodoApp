@@ -1,12 +1,10 @@
-import os
 import sqlite3 as sql
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
-basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
 # /// = relative path, //// = absolute path
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////database/todo.db' 
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/mydb.sqlite' 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
